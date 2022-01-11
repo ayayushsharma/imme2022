@@ -18,6 +18,7 @@
       return document.querySelector(el)
     }
   }
+  
 
   /**
    * Easy event listener function
