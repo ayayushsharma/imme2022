@@ -1392,29 +1392,25 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Frequently Asked Questions
+# How to Reach
 --------------------------------------------------------------*/
-.faq .faq-list {
+.htr .htr-list {
   padding: 0 100px;
 }
-
-.faq .faq-list ul {
+.htr .htr-list ul {
   padding: 0;
   list-style: none;
 }
-
-.faq .faq-list li+li {
+.htr .htr-list li + li {
   margin-top: 15px;
 }
-
-.faq .faq-list li {
+.htr .htr-list li {
   padding: 20px;
   background: #fff;
   border-radius: 4px;
   position: relative;
 }
-
-.faq .faq-list a {
+.htr .htr-list a {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -1425,50 +1421,42 @@ section {
   outline: none;
   cursor: pointer;
 }
-
-.faq .faq-list .icon-help {
+.htr .htr-list .icon-help {
   font-size: 24px;
   position: absolute;
   right: 0;
   left: 20px;
   color: #47b2e4;
 }
-
-.faq .faq-list .icon-show, .faq .faq-list .icon-close {
+.htr .htr-list .icon-show, .htr .htr-list .icon-close {
   font-size: 24px;
   position: absolute;
   right: 0;
   top: 0;
 }
-
-.faq .faq-list p {
+.htr .htr-list p {
   margin-bottom: 0;
   padding: 10px 0 0 0;
 }
-
-.faq .faq-list .icon-show {
+.htr .htr-list .icon-show {
   display: none;
 }
-
-.faq .faq-list a.collapsed {
+.htr .htr-list a.collapsed {
   color: #37517e;
   transition: 0.3s;
 }
-
-.faq .faq-list a.collapsed:hover {
+.htr .htr-list a.collapsed:hover {
   color: #47b2e4;
 }
-
-.faq .faq-list a.collapsed .icon-show {
+.htr .htr-list a.collapsed .icon-show {
   display: inline-block;
 }
-
-.faq .faq-list a.collapsed .icon-close {
+.htr .htr-list a.collapsed .icon-close {
   display: none;
 }
 
 @media (max-width: 1200px) {
-  .faq .faq-list {
+  .htr .htr-list {
     padding: 0;
   }
 }
