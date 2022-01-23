@@ -729,6 +729,10 @@
               margin-bottom: 0.25em;
             }
 
+            .tab-data ul li span {
+              border-bottom: 0.5px solid transparent;
+            }
+
             @media screen and (min-width: 768px) {
               .tab-data ul {
                 margin-top: 1.5rem;
@@ -742,7 +746,7 @@
             }
           </style>
           <!---->
-          <div class="tab">
+          <div class="tab" id="call-papers-themes-tabs">
             <button
               class="tablinks active"
               onclick="openTab(event, 'material-design')"
@@ -817,7 +821,10 @@
               let list = document.createElement("ul");
               data.forEach((item) => {
                 let li = document.createElement("li");
-                li.innerText = item;
+                let span = document.createElement("span");
+                // li.innerText = item;
+                span.innerText = item;
+                li.appendChild(span);
                 list.appendChild(li);
               });
               divNode.appendChild(list);
@@ -905,6 +912,25 @@
             appendIntoList(Industrial_Management, Industrial_Management_Data);
           </script>
 
+          <script>
+            let has_user_interacted = false;
+            let button_clicked_state = 0;
+            buttonsForTabs = document.querySelectorAll(
+              "div#call-papers-themes-tabs > button"
+            );
+            console.log(buttonsForTabs.length);
+            setInterval(function () {
+              // if user has not clicked any button, continue the sliding of panels
+              buttonsForTabs[
+                ++button_clicked_state % buttonsForTabs.length
+              ].click();
+              // limiting state to not go to a very high
+              if (button_clicked_state > 3 * buttonsForTabs.length) {
+                button_clicked_state = 0;
+              }
+            }, 7500);
+          </script>
+
           <div class="row"></div>
           <script>
             // navigation bar
@@ -943,20 +969,14 @@
       </section>
 
       <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio">
+      <!-- <section id="portfolio" class="portfolio">
         <div class="container" data-aos="fade-up">
-          <!-- <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div> -->
-
           <ul
             id="portfolio-flters"
             class="row d-flex justify-content-center"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <!-- <li data-filter="*" class="filter-active">All</li> -->
             <li data-filter=".filter-dates" class="col" id="initial-click-list">
               <span>Important Dates</span>
             </li>
@@ -1005,7 +1025,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End Portfolio Section -->
 
       <!-- ======= Team Section ======= -->
@@ -1293,87 +1313,97 @@
       </section>
       <!-- End Contact Section -->
 
+      <!-- ======= How to reach Section ======= -->
+      <section id="htr" class="htr section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>How to Reach</h2>
+            <p>
+              Prayagraj is situated in the north part of India in the state of
+              Uttar Pradesh. It is well connected with flights, rail and road
+              transport to other parts of India. Daily trains, buses and flights
+              are available from major cities in India.
+            </p>
+          </div>
 
-            <!-- ======= How to reach Section ======= -->
-            <section id="htr" class="htr section-bg">
-              <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                  <h2>How to Reach</h2>
+          <div class="htr-list">
+            <ul>
+              <li data-aos="fade-up" data-aos-delay="100">
+                <i class="bx bx-help-circle icon-help"></i>
+                <a
+                  data-bs-toggle="collapse"
+                  class="collapse"
+                  data-bs-target="#htr-list-1"
+                  >Prayagraj by Air <i class="bx bx-chevron-down icon-show"></i
+                  ><i class="bx bx-chevron-up icon-close"></i
+                ></a>
+                <div
+                  id="htr-list-1"
+                  class="collapse show"
+                  data-bs-parent=".htr-list"
+                >
                   <p>
-                    Prayagraj is situated in the north part of India in the state of Uttar Pradesh. It is well connected with flights, rail and road transport to other parts of India. Daily trains, buses and flights are available from major cities in India.
+                    Prayagraj has its own domestic airport which is 15 km away
+                    from the heart of the city. Airport is connected to metros
+                    like Delhi, Kolkata and Lucknow. Airport to city taxi charge
+                    is about Rs 400. Abroad travelers need to get connecting
+                    flights from Delhi or Kolkata.
                   </p>
                 </div>
-      
-                <div class="htr-list">
-                  <ul>
-                    <li data-aos="fade-up" data-aos-delay="100">
-                      <i class="bx bx-help-circle icon-help"></i>
-                      <a
-                        data-bs-toggle="collapse"
-                        class="collapse"
-                        data-bs-target="#htr-list-1"
-                        >Prayagraj by Air
-                        <i class="bx bx-chevron-down icon-show"></i
-                        ><i class="bx bx-chevron-up icon-close"></i
-                      ></a>
-                      <div
-                        id="htr-list-1"
-                        class="collapse show"
-                        data-bs-parent=".htr-list"
-                      >
-                        <p>
-                          Prayagraj has its own domestic airport which is 15 km away from the heart of the city. Airport is connected to metros like Delhi, Kolkata and Lucknow. Airport to city taxi charge is about Rs 400. Abroad travelers need to get connecting flights from Delhi or Kolkata.
-                        </p>
-                      </div>
-                    </li>
-      
-                    <li data-aos="fade-up" data-aos-delay="200">
-                      <i class="bx bx-help-circle icon-help"></i>
-                      <a
-                        data-bs-toggle="collapse"
-                        data-bs-target="#htr-list-2"
-                        class="collapsed"
-                        >Prayagraj by Train
-                        <i class="bx bx-chevron-down icon-show"></i
-                        ><i class="bx bx-chevron-up icon-close"></i
-                      ></a>
-                      <div
-                        id="htr-list-2"
-                        class="collapse"
-                        data-bs-parent=".htr-list"
-                      >
-                        <p>
-                          Railway station in Prayagraj (Prayagraj Junction) is a major railway station of north India and is situated in the heart of the city. The railway station is very well connected to all the important cities in India
-                        </p>
-                      </div>
-                    </li>
-      
-                    <li data-aos="fade-up" data-aos-delay="300">
-                      <i class="bx bx-help-circle icon-help"></i>
-                      <a
-                        data-bs-toggle="collapse"
-                        data-bs-target="#htr-list-3"
-                        class="collapsed"
-                        >Prayagraj by Bus
-                        <i class="bx bx-chevron-down icon-show"></i
-                        ><i class="bx bx-chevron-up icon-close"></i
-                      ></a>
-                      <div
-                        id="htr-list-3"
-                        class="collapse"
-                        data-bs-parent=".htr-list"
-                      >
-                        <p>
-                          Very good road services are available in Prayagraj. UPSRTC buses give service to most of the cities in Uttar Pradesh. From Prayagraj bus services are available to Lucknow (200 KM), Kanpur (200KM), Delhi (650 km) and Kolkata (800 km) etc.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-            <!-- End How to Reach Section -->
+              </li>
 
+              <li data-aos="fade-up" data-aos-delay="200">
+                <i class="bx bx-help-circle icon-help"></i>
+                <a
+                  data-bs-toggle="collapse"
+                  data-bs-target="#htr-list-2"
+                  class="collapsed"
+                  >Prayagraj by Train
+                  <i class="bx bx-chevron-down icon-show"></i
+                  ><i class="bx bx-chevron-up icon-close"></i
+                ></a>
+                <div
+                  id="htr-list-2"
+                  class="collapse"
+                  data-bs-parent=".htr-list"
+                >
+                  <p>
+                    Railway station in Prayagraj (Prayagraj Junction) is a major
+                    railway station of north India and is situated in the heart
+                    of the city. The railway station is very well connected to
+                    all the important cities in India
+                  </p>
+                </div>
+              </li>
+
+              <li data-aos="fade-up" data-aos-delay="300">
+                <i class="bx bx-help-circle icon-help"></i>
+                <a
+                  data-bs-toggle="collapse"
+                  data-bs-target="#htr-list-3"
+                  class="collapsed"
+                  >Prayagraj by Bus <i class="bx bx-chevron-down icon-show"></i
+                  ><i class="bx bx-chevron-up icon-close"></i
+                ></a>
+                <div
+                  id="htr-list-3"
+                  class="collapse"
+                  data-bs-parent=".htr-list"
+                >
+                  <p>
+                    Very good road services are available in Prayagraj. UPSRTC
+                    buses give service to most of the cities in Uttar Pradesh.
+                    From Prayagraj bus services are available to Lucknow (200
+                    KM), Kanpur (200KM), Delhi (650 km) and Kolkata (800 km)
+                    etc.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- End How to Reach Section -->
     </main>
     <!-- End #main -->
 
@@ -1509,6 +1539,5 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/slider.js"></script>
-
   </body>
 </html>
