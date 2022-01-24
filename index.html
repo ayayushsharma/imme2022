@@ -223,7 +223,7 @@
     </section>
     <main id="main">
       <!-- ======= Clients Section ======= -->
-      <section id="clients" class="clients section-bg">
+      <!-- <section id="clients" class="clients section-bg">
         <div class="container">
           <div class="row" data-aos="zoom-in">
             <div
@@ -287,15 +287,21 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End Cliens Section -->
 
       <!-- ======= About Us Section ======= -->
       <section id="about" class="about">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2>About Us</h2>
+            <h2>Conference Objectives</h2>
           </div>
+          <style>
+            .about .content p {
+              letter-spacing: 0.05ch;
+              font-size: 1.1rem;
+            }
+          </style>
 
           <div class="row content">
             <div class="col-lg-6">
@@ -324,7 +330,7 @@
       <!-- End About Us Section -->
 
       <!-- ======= Why Us Section ======= -->
-      <section id="why-us" class="why-us section-bg">
+      <!-- <section id="why-us" class="why-us section-bg">
         <div class="container-fluid" data-aos="fade-up">
           <div class="row">
             <div
@@ -430,11 +436,11 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End Why Us Section -->
 
       <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills">
+      <!-- <section id="skills" class="skills">
         <div class="container" data-aos="fade-up">
           <div class="row">
             <div
@@ -513,7 +519,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End Skills Section -->
 
       <!-- ======= Dates Section ======= -->
@@ -608,6 +614,39 @@
           <div class="section-title">
             <h2>Call for Papers and Conference Theme</h2>
           </div>
+          <style>
+            #call-papers-themes > .container > p.description {
+              letter-spacing: 0.05ch;
+              /* text-align: center; */
+              margin-top: -1rem;
+              margin-bottom: 2rem;
+            }
+
+            #call-papers-themes > .container > p {
+              letter-spacing: 0.05ch;
+              /* text-align: center; */
+              margin-top: -1rem;
+            }
+          </style>
+          <p class="description">
+            High quality unpublished original research contributions describing
+            conceptual, constructive, experimental, analytical and theoretical
+            work towards sustainability and management are cordially invited for
+            the conference. The full length paper is restricted to
+            <strong>maximum of 8 pages</strong>, including figures, tables,
+            references etc. <br />The template for full paper is available at
+            <strong
+              ><a href="www.imme2022.com/template"
+                >www.imme2022.com/template</a
+              ></strong
+            ><br />Full papers will be communicated through
+            <a href="">Easy Chair portal</a>.
+          </p>
+
+          <p align="center">
+            The Topics of the IMME 2022 include (but not limited to) the
+            followings:
+          </p>
 
           <style>
             @media screen and (min-width: 768px) {
@@ -643,14 +682,14 @@
               }
               /* Change background color of buttons on hover */
               .tab button:hover {
-                background-color: rgba(221, 221, 221, 0.178);
+                background-color: rgba(221, 221, 221, 0.15);
               }
               /* Create an active/current tablink class */
               .tab button.active {
-                background-color: rgba(255, 255, 255, 0.301);
+                background-color: rgba(255, 255, 255, 0.3);
               }
               /* Style the tab content */
-              .tabcontent {
+              .call_for_paper_tabcontent {
                 display: none;
                 padding: 6px 12px;
                 border: 0px solid #ccc;
@@ -667,9 +706,9 @@
                   rgb(55, 143, 231) 100%
                 );
                 display: grid;
-                /* grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr);
 
-                grid-column-gap: 0.5rem;
+                /* grid-column-gap: 0.5rem;
                 grid-row-gap: 0.5rem;
                 grid-gap: 0.5rem; */
 
@@ -683,7 +722,7 @@
                 cursor: pointer;
                 padding: 14px 16px;
                 transition: 0.3s;
-                font-size: 1.25rem;
+                font-size: 1rem;
                 /* margin: 0.5em; */
                 border-radius: 1.5rem;
                 color: white;
@@ -700,14 +739,25 @@
                 background-color: rgba(255, 255, 255, 0.301);
               }
               /* Style the tab content */
-              .tabcontent {
+              .call_for_paper_tabcontent {
                 display: none;
                 padding: 6px 12px;
                 border: 0px solid #ccc;
                 border-top: none;
               }
             }
-            .tab-data .tabcontent {
+
+            .tab button.active {
+              animation: tab-background 1.25s infinite;
+            }
+
+            @keyframes tab-background {
+              0% {
+              }
+              50% {
+              }
+            }
+            .tab-data .call_for_paper_tabcontent {
               margin-top: 1.5rem;
               background-color: white;
               border-radius: 0.5rem;
@@ -773,24 +823,32 @@
             </button>
           </div>
           <div class="tab-data">
-            <div id="material-design" class="tabcontent">
+            <div id="material-design" class="call_for_paper_tabcontent">
               <!-- <a href="#!" onclick="tabLink('Jazz')">HERE</a> -->
               <h2>Materials and Design</h2>
             </div>
 
-            <div id="Manufacturing-Engineering" class="tabcontent">
+            <div
+              id="Manufacturing-Engineering"
+              class="call_for_paper_tabcontent"
+            >
               <h2>Manufacturing Engineering</h2>
             </div>
 
-            <div id="Energy-and-Environment" class="tabcontent">
+            <div id="Energy-and-Environment" class="call_for_paper_tabcontent">
               <h2>Energy and Environment</h2>
             </div>
 
-            <div id="Industrial-Management-and-Automation" class="tabcontent">
+            <div
+              id="Industrial-Management-and-Automation"
+              class="call_for_paper_tabcontent"
+            >
               <h2>Industrial Management and Automation</h2>
             </div>
           </div>
-
+          <!--
+              Publication Part, style and tags
+          -->
           <style>
             #publication {
               margin-top: 2rem;
@@ -812,7 +870,9 @@
               Best Poster Awards will also be presented
             </p>
           </div>
-
+          <!-- 
+              add data into list
+          -->
           <script>
             /**
              * function to add data into list
@@ -915,7 +975,7 @@
           <script>
             let has_user_interacted = false;
             let button_clicked_state = 0;
-            buttonsForTabs = document.querySelectorAll(
+            let buttonsForTabs = document.querySelectorAll(
               "div#call-papers-themes-tabs > button"
             );
             console.log(buttonsForTabs.length);
@@ -931,14 +991,15 @@
             }, 7500);
           </script>
 
-          <div class="row"></div>
           <script>
             // navigation bar
             function transition(genreName) {
-              var i, tabcontent, tablinks;
-              tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+              var i, call_for_paper_tabcontent, tablinks;
+              call_for_paper_tabcontent = document.getElementsByClassName(
+                "call_for_paper_tabcontent"
+              );
+              for (i = 0; i < call_for_paper_tabcontent.length; i++) {
+                call_for_paper_tabcontent[i].style.display = "none";
               }
               tablinks = document.getElementsByClassName("tablinks");
               for (i = 0; i < tablinks.length; i++) {
@@ -967,7 +1028,201 @@
           </script>
         </div>
       </section>
+      <!-- End Call for Papers and Conference Themes -->
 
+      <!-- ======= Cta Section ======= -->
+      <section id="registration" class="">
+        <div class="container" data-aos="zoom-in">
+          <div class="section-title">
+            <h2>Registration</h2>
+          </div>
+          <style>
+            #registration > .container > .row > .col-lg-6 {
+              padding: 1.5rem 0.5rem;
+            }
+          </style>
+          <div class="row">
+            <div class="col-lg-6 text-lg-start">
+              <style>
+                #Registration-Fee {
+                  letter-spacing: 0.05ch;
+                  display: grid;
+                  /* background-color: #eaefff; */
+                  /* background-color: rgba(28, 49, 87, 0.9); */
+                  padding: 2em;
+                  border-radius: 0.5rem;
+                  box-shadow: 0px 2px 1rem rgba(0, 0, 0, 0.1);
+                  border-top: 0.25rem solid;
+                  border-top-color: #47b2e4;
+                  height: 100%;
+                }
+
+                #Registration-Fee h3 {
+                  margin-bottom: 0.5em;
+                  padding-bottom: 0.25em;
+                  /* text-align: center; */
+                  /* border-bottom: solid 0.5px grey; */
+                }
+
+                #Registration-Fee table tr {
+                  font-weight: 500;
+                  transition: 0.2s;
+                  border-bottom: 1px solid #ddd;
+                }
+
+                #Registration-Fee table td:nth-child(2) {
+                  text-align: right;
+                }
+
+                #Registration-Fee table td {
+                  padding: 1em 0.5em;
+                }
+              </style>
+              <div id="Registration-Fee">
+                <h3>Registration Fee</h3>
+              </div>
+              <style>
+                #Registration-Fee table a,
+                #Registration-Fee table a:focus {
+                  color: inherit;
+                }
+                #Registration-Fee table a:hover {
+                  color: rgb(2, 135, 224);
+                }
+              </style>
+              <script>
+                var registration = {
+                  feeTable: function () {
+                    let feeArray = [
+                      {
+                        for: "Indian Delegates (Industry)",
+                        price: "10,000.00",
+                        type: "RS",
+                      },
+                      {
+                        for: "Indian Delegates (Academia)",
+                        price: "4,000.00",
+                        type: "RS",
+                      },
+                      {
+                        for: "Indian Delegates (Student)",
+                        price: "3,000.00",
+                        type: "RS",
+                      },
+                      {
+                        for: "Foreign Delegates",
+                        price: "300.00",
+                        type: "USD",
+                      },
+                      {
+                        for: "Foreign Delegates (Student)",
+                        price: "200.00",
+                        type: "USD",
+                      },
+                    ];
+
+                    let table = document.createElement("table");
+                    feeArray.forEach((array_element) => {
+                      let tr = document.createElement("tr");
+                      let category = document.createElement("td");
+                      category.innerText = array_element.for;
+                      let fee = document.createElement("td");
+                      fee.innerHTML = `${
+                        array_element.type == "RS"
+                          ? '<a href="https://en.wikipedia.org/wiki/File:Indian_Rupee_symbol.svg">Rs</a> '
+                          : "USD "
+                      }${array_element.price}`;
+                      tr.appendChild(category);
+                      tr.appendChild(fee);
+                      table.appendChild(tr);
+                    });
+                    document
+                      .getElementById("Registration-Fee")
+                      .appendChild(table);
+                    console.log(table);
+                  },
+                };
+                registration.feeTable();
+              </script>
+            </div>
+            <div class="col-lg-6 text-lg-start">
+              <style>
+                #Mode-of-payment {
+                  letter-spacing: 0.05ch;
+                  display: grid;
+                  /* background-color: #eaefff; */
+                  /* background-color: rgba(28, 49, 87, 0.9); */
+                  padding: 2em;
+                  border-radius: 0.5rem;
+                  box-shadow: 0px 2px 1rem rgba(0, 0, 0, 0.1);
+                  border-top: 0.25rem solid;
+                  border-top-color: #47b2e4;
+                }
+
+                #Mode-of-payment h3 {
+                  margin-bottom: 0.5em;
+                  padding-bottom: 0.25em;
+                  /* text-align: center; */
+                  /* border-bottom: solid 0.5px grey; */
+                }
+
+                #Mode-of-payment table tr {
+                  font-weight: 500;
+                  transition: 0.2s;
+                  border-bottom: 1px solid #ddd;
+                }
+
+                #Mode-of-payment table td:nth-child(2) {
+                  text-align: right;
+                }
+
+                #Mode-of-payment table td {
+                  padding: 0.5em;
+                }
+              </style>
+              <div id="Mode-of-payment">
+                <h3>Mode of Payment</h3>
+                <p>
+                  All payments should be made through online electronic transfer
+                  in the account of conference with following detail:
+                </p>
+                <table>
+                  <tr>
+                    <td>Beneficiary Name</td>
+                    <td>IMME 2022</td>
+                  </tr>
+                  <tr>
+                    <td>Account No</td>
+                    <td>----</td>
+                  </tr>
+                  <tr>
+                    <td>Account Type</td>
+                    <td>Current Account</td>
+                  </tr>
+                  <tr>
+                    <td>Bank</td>
+                    <td>
+                      Bank of Baroda,<br />
+                      MNNIT Allahabad - 211004
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IFSC</td>
+                    <td>BARB0VJMNRE <i>(fifth digit is Zero)</i></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <!-- <div class="col-lg-6" id="Mode-of-Payment">
+              <h3>Registration Fee</h3>
+            </div> -->
+            <!-- <div class="col-lg-3 cta-btn-container text-center">
+              <a class="cta-btn align-middle" href="#">Call To Action</a>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- End Cta Section -->
       <!-- ======= Portfolio Section ======= -->
       <!-- <section id="portfolio" class="portfolio">
         <div class="container" data-aos="fade-up">
