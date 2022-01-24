@@ -634,7 +634,8 @@
             work towards sustainability and management are cordially invited for
             the conference. The full length paper is restricted to
             <strong>maximum of 8 pages</strong>, including figures, tables,
-            references etc. <br />The template for full paper is available at
+            references etc. <br /><br />The template for full paper is available
+            at
             <strong
               ><a href="www.imme2022.com/template"
                 >www.imme2022.com/template</a
@@ -1030,7 +1031,7 @@
       </section>
       <!-- End Call for Papers and Conference Themes -->
 
-      <!-- ======= Cta Section ======= -->
+      <!-- ======= Registration Section ======= -->
       <section id="registration" class="">
         <div class="container" data-aos="zoom-in">
           <div class="section-title">
@@ -1222,7 +1223,292 @@
           </div>
         </div>
       </section>
-      <!-- End Cta Section -->
+      <!-- End Registration Section -->
+
+      <!-- ======= Advertisement-Tariffs Section ======= -->
+      <section id="Advertisement-Tariffs" class="section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Advertisement Tariffs</h2>
+            <p>
+              A conference abstract book will be published to commemorate the
+              occasion, which will be distributed to dignitaries, delegates,
+              corporate members and will be sent to various related
+              organizations across the country.
+            </p>
+            <br />
+            <p>
+              <a>
+                It has been decided to accept selected advertisements as per the
+                following rates:
+              </a>
+            </p>
+          </div>
+          <style>
+            #Advertisement-Tariffs .section-title p {
+              letter-spacing: 0.05ch;
+            }
+
+            #Advertisement-Tariffs > .container > div > div {
+              display: grid;
+            }
+
+            #Advertisement-Tariffs table {
+              border-collapse: collapse;
+              background-color: white;
+              border-radius: 0.5rem;
+            }
+            #Advertisement-Tariffs table td {
+              padding: 1em 1.5em;
+              border-bottom: 0.5px #ddd solid;
+              letter-spacing: 0.05ch;
+            }
+
+            #Advertisement-Tariffs table tr:last-child td {
+              border-bottom: 0.5px transparent;
+            }
+
+            #Advertisement-Tariffs table tr td:nth-child(2) {
+              text-align: right;
+            }
+          </style>
+          <div class="row justify-content-center">
+            <div class="col-md-7">
+              <table id="Advertisement-Tariffs-Table" class=""></table>
+            </div>
+          </div>
+          <script>
+            var Advertisement = {
+              tariffTable: function () {
+                let tariffs = [
+                  {
+                    for: "Back cover outside (color)",
+                    price: "20,000.00",
+                    type: "RS",
+                  },
+                  {
+                    for: "Back cover inside (color)",
+                    price: "15,000.00",
+                    type: "RS",
+                  },
+                  {
+                    for: "Front cover inside (color)",
+                    price: "15,000.00",
+                    type: "RS",
+                  },
+                  {
+                    for: "Inside full page",
+                    price: "10,000.00",
+                    type: "RS",
+                  },
+                  {
+                    for: "Flex banner",
+                    price: "5,000.00",
+                    type: "RS",
+                  },
+                ];
+                let table = document.getElementById(
+                  "Advertisement-Tariffs-Table"
+                );
+                tariffs.forEach((array_element) => {
+                  let tr = document.createElement("tr");
+                  let category = document.createElement("td");
+                  category.innerText = array_element.for;
+                  let fee = document.createElement("td");
+                  fee.innerHTML = `${
+                    array_element.type == "RS"
+                      ? '<a href="https://en.wikipedia.org/wiki/File:Indian_Rupee_symbol.svg">Rs</a> '
+                      : "USD "
+                  }${array_element.price}`;
+                  tr.appendChild(category);
+                  tr.appendChild(fee);
+                  table.appendChild(tr);
+                });
+                console.log(table);
+              },
+            };
+            Advertisement.tariffTable();
+          </script>
+        </div>
+      </section>
+      <!-- Advertisement-Tariffs Section -->
+
+      <!-- ======= Call for Sponsorship Section ======= -->
+      <section id="Call-for-Sponsorship" class="Call-for-Sponsorship">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Call for Sponsorship</h2>
+            <p>
+              The international conference is an opportunity to interact and
+              publicize the product and services of leading industries. The
+              organizing committee extends a very warm invitation to sponsor
+              this important national event. <br /><br />By virtue of
+              sponsorship, such organizations are entitled to the following
+              privileges:
+            </p>
+          </div>
+          <style>
+            .sponsorship-call-cards {
+              padding: 0 1rem;
+              letter-spacing: 0.05ch;
+            }
+            .sponsorship-call-cards > div {
+              display: flex;
+              flex-direction: column;
+              position: relative;
+              border-radius: 0.5rem;
+              overflow: hidden;
+              padding: 0;
+              width: 100%;
+              height: 100%;
+              box-shadow: 0px 2px 0.75rem rgba(0, 0, 0, 0.1);
+            }
+
+            @media screen and (max-width: 1000px) {
+              .sponsorship-call-cards > div {
+                flex-direction: row;
+              }
+            }
+
+            .sponsorship-call-cards ul {
+              padding-left: 1rem;
+              margin: 0;
+            }
+
+            .sponsorship-call-cards li {
+              font-size: 1.1rem;
+              list-style: none;
+              margin-top: 0.6em;
+              position: relative;
+            }
+
+            .sponsorship-call-cards i {
+              color: rgb(0, 184, 0);
+              padding-right: 0.5rem;
+              font-size: 1.3em;
+              vertical-align: baseline;
+            }
+
+            .image {
+              min-width: 1.25rem;
+              min-height: 2.5rem;
+              background-repeat: no-repeat; /* Do not repeat the image */
+              background-size: cover;
+            }
+
+            .Sponsorship-call-data-section {
+              padding: 1.5em;
+              color: inherit;
+            }
+
+            .Sponsorship-call-data-section h3 {
+              font-size: 1.5rem;
+              font-weight: 400;
+            }
+
+            .Sponsorship-call-data-section h4 {
+              font-size: 1.75rem;
+              font-weight: 400;
+            }
+
+            @media screen and (min-width: 768px) {
+              .Sponsorship-call-data-section {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              .Sponsorship-call-data-section > div {
+                margin-top: auto;
+                margin-bottom: auto;
+              }
+            }
+
+            @media screen and (min-width: 992px) {
+              .Sponsorship-call-data-section {
+                flex-direction: column;
+              }
+            }
+
+            .Sponsorship-call-data-section h4 span {
+              font-size: 1.1em;
+              margin-right: 0.25rem;
+            }
+          </style>
+          <div class="row" id="Call-for-Sponsorship-Lists"></div>
+          <script>
+            let callForSponsorship = {
+              // files the Call for Sponsorship List section
+              PriceCards: function () {
+                let ListItem = (item) =>
+                  `<li><i class="bx bx-check"></i>${item}</li>`;
+                let Card = (tier, price, delay, list) => `
+                <div
+                  class="col-lg-4 mt-4 mt-lg-0 sponsorship-call-cards"
+                  data-aos="fade-up"
+                  data-aos-delay="${delay}"
+                  >
+                  <div>
+                    <div class="image" 
+                      style="background-image: url('assets/img/textures/${tier}.jpg');">
+                    </div>
+                    <div class="Sponsorship-call-data-section">
+                      <div>
+                        <h3>${tier}</h3>
+                        <h4><span>&#8377;</span>${price}</h4>
+                      </div>
+                      <ul>
+                        ${list}
+                      </ul>
+                    </div>
+                  </div>
+                </div>`;
+                let selectID = document.getElementById(
+                  "Call-for-Sponsorship-Lists"
+                );
+                let SponsorshipData = [
+                  {
+                    tier: "Platinum",
+                    price: "2,00,000.00",
+                    list: [
+                      "4 delegates free",
+                      "Banner",
+                      "20 minutes presentation",
+                    ],
+                  },
+                  {
+                    tier: "Gold",
+                    price: "1,00,000.00",
+                    list: [
+                      "3 delegates free",
+                      "Banner",
+                      "15 minutes presentation",
+                    ],
+                  },
+                  {
+                    tier: "Silver",
+                    price: "50,000.00",
+                    list: [
+                      "2 delegates free",
+                      "Banner",
+                      "10 minutes presentation",
+                    ],
+                  },
+                ];
+                let resultInnerHTML = ``;
+                let i = 0;
+                SponsorshipData.forEach(({ tier, price, list }) => {
+                  let listHTML = ``;
+                  list.forEach((point) => (listHTML += ListItem(point)));
+                  resultInnerHTML += Card(tier, price, ++i, listHTML);
+                });
+                selectID.innerHTML = resultInnerHTML;
+              },
+            };
+            callForSponsorship.PriceCards();
+          </script>
+        </div>
+      </section>
+
       <!-- ======= Portfolio Section ======= -->
       <!-- <section id="portfolio" class="portfolio">
         <div class="container" data-aos="fade-up">
@@ -1284,7 +1570,7 @@
       <!-- End Portfolio Section -->
 
       <!-- ======= Team Section ======= -->
-      <section id="team" class="team section-bg">
+      <!-- <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>Team</h2>
@@ -1416,11 +1702,11 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End Team Section -->
 
       <!-- ======= Pricing Section ======= -->
-      <section id="pricing" class="pricing">
+      <!-- <section id="pricing" class="pricing">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>Pricing</h2>
@@ -1515,7 +1801,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End Pricing Section -->
 
       <!-- ======= Contact Section ======= -->
