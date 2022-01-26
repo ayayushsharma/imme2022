@@ -256,7 +256,7 @@
     let savedStateTemperoryNavBar = document.getElementById("header").innerHTML;
 
     // fetching navigation bar of index,html
-    fetch("./../../index.html").then(function (response) {
+    fetch("index.html").then(function (response) {
         return response.text();
     }).then(function (html) {
         // This is the HTML from our response as a text string
