@@ -224,7 +224,11 @@
                     tariffs.forEach((array_element) => {
                       let tr = document.createElement("tr");
                       let category = document.createElement("td");
-                      
+                      category.innerText = array_element.for;
+                      let fee = document.createElement("td");
+                      tr.appendChild(category);
+                      tr.appendChild(fee);
+                      table.appendChild(tr);
                     });
                     console.log(table);
                   },
