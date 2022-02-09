@@ -136,51 +136,103 @@
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div>
-            <table>
-              <thead>
-                <tr>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Job Title</th>
-                  <th>Twitter</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-column="First Name">James</td>
-                  <td data-column="Last Name">Matman</td>
-                  <td data-column="Job Title">Chief Sandwich Eater</td>
-                  <td data-column="Twitter">@james</td>
-                </tr>
-                <tr>
-                  <td data-column="First Name">Andor</td>
-                  <td data-column="Last Name">Nagy</td>
-                  <td data-column="Job Title">Designer</td>
-                  <td data-column="Twitter">@andornagy</td>
-                </tr>
-                <tr>
-                  <td data-column="First Name">Tamas</td>
-                  <td data-column="Last Name">Biro</td>
-                  <td data-column="Job Title">Game Tester</td>
-                  <td data-column="Twitter">@tamas</td>
-                </tr>
-                <tr>
-                  <td data-column="First Name">Zoli</td>
-                  <td data-column="Last Name">Mastah</td>
-                  <td data-column="Job Title">Developer</td>
-                  <td data-column="Twitter">@zoli</td>
-                </tr>
-                <tr>
-                  <td data-column="First Name">Szabi</td>
-                  <td data-column="Last Name">Nagy</td>
-                  <td data-column="Job Title">Chief Sandwich Eater</td>
-                  <td data-column="Twitter">@szabi</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          
+          <section id="Advertisement-Tariffs" class="section-bg">
+            <div class="container" data-aos="fade-up">
+              <div class="section-title">
+                <h2>Advertisement Tariffs</h2>
+                <p>
+                  A conference abstract book will be published to commemorate the
+                  occasion, which will be distributed to dignitaries, delegates,
+                  corporate members and will be sent to various related
+                  organizations across the country.
+                </p>
+                <br />
+                <p>
+                  <a>
+                    It has been decided to accept selected advertisements as per the
+                    following rates:
+                  </a>
+                </p>
+              </div>
+              <style>
+                #Advertisement-Tariffs .section-title p {
+                  letter-spacing: 0.05ch;
+                }
+    
+                #Advertisement-Tariffs > .container > div > div {
+                  display: grid;
+                }
+    
+                #Advertisement-Tariffs table {
+                  border-collapse: collapse;
+                  background-color: white;
+                  border-radius: 0.5rem;
+                }
+                #Advertisement-Tariffs table td {
+                  padding: 1em 1.5em;
+                  border-bottom: 0.5px #ddd solid;
+                  letter-spacing: 0.05ch;
+                }
+    
+                #Advertisement-Tariffs table tr:last-child td {
+                  border-bottom: 0.5px transparent;
+                }
+    
+                #Advertisement-Tariffs table tr td:nth-child(2) {
+                  text-align: right;
+                }
+              </style>
+              <div class="row justify-content-center">
+                <div class="col-md-7">
+                  <table id="Advertisement-Tariffs-Table" class=""></table>
+                </div>
+              </div>
+              <script>
+                var Advertisement = {
+                  tariffTable: function () {
+                    let tariffs = [
+                      {
+                        for: "Back cover outside (color)",
+                        price: "20,000.00",
+                        type: "RS",
+                      },
+                      {
+                        for: "Back cover inside (color)",
+                        price: "15,000.00",
+                        type: "RS",
+                      },
+                      {
+                        for: "Front cover inside (color)",
+                        price: "15,000.00",
+                        type: "RS",
+                      },
+                      {
+                        for: "Inside full page",
+                        price: "10,000.00",
+                        type: "RS",
+                      },
+                      {
+                        for: "Flex banner",
+                        price: "5,000.00",
+                        type: "RS",
+                      },
+                    ];
+                    let table = document.getElementById(
+                      "Advertisement-Tariffs-Table"
+                    );
+                    tariffs.forEach((array_element) => {
+                      let tr = document.createElement("tr");
+                      let category = document.createElement("td");
+                      
+                    });
+                    console.log(table);
+                  },
+                };
+                Advertisement.tariffTable();
+              </script>
+            </div>
+          </section>
 
           <!--Organizing Committee-->
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
