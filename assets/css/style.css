@@ -99,7 +99,6 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-
 #preloader {
   position: fixed;
   top: 0;
@@ -193,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo {
-  font-size: 30px;
+  font-size: 23.5px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -814,6 +813,11 @@ section {
 
 .why-us .accordion-list a.collapsed .icon-close {
   display: none;
+}
+
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1180px;
 }
 
 @media (max-width: 1024px) {
