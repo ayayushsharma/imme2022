@@ -370,6 +370,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   z-index: 999;
 }
+.mobile-slider{
+  height:50vh;
+}
 
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
@@ -540,7 +543,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
     margin-bottom: 30px;
   }
-
+  #hero{
+    height:60vh;
+  }
   #hero .hero-img img {
     width: 70%;
   }
@@ -550,7 +555,9 @@ h1, h2, h3, h4, h5, h6 {
   #hero .hero-img img {
     width: 80%;
   }
-
+  #hero{
+    height: 40vh;
+  }
   #hero .btn-get-started {
     font-size: 16px;
     padding: 10px 24px 11px 24px;
