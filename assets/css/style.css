@@ -1373,7 +1373,13 @@ section {
 .pricing .featured {
   border-top-color: #47b2e4;
 }
-
+.logoinstitute{
+  position: fixed;
+  top:10px;
+  left: 10px;
+  height:5rem;
+  z-index: 999;
+}
 .pricing .featured .buy-btn {
   background: #47b2e4;
   color: #fff;
@@ -1382,11 +1388,18 @@ section {
 .pricing .featured .buy-btn:hover {
   background: #23a3df;
 }
-
+@media (max-width:2000px){
+  .shortlogo{
+    visibility: hidden;
+  }
+}
 @media (max-width: 992px) {
   .pricing .box {
     max-width: 60%;
     margin: 0 auto 30px auto;
+  }
+  .shortlogo{
+   visibility: hidden; 
   }
 }
 
@@ -1395,12 +1408,21 @@ section {
     max-width: 80%;
     margin: 0 auto 30px auto;
   }
+  .shortlogo{
+    visibility: hidden; 
+  }
 }
 
 @media (max-width: 420px) {
   .pricing .box {
     max-width: 100%;
     margin: 0 auto 30px auto;
+  }
+  .logoinstitute{
+    visibility: hidden;
+  }
+  .shortlogo{
+    visibility: visible;
   }
 }
 
