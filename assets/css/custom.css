@@ -6,6 +6,12 @@
   position: relative;
 }
 
+@media screen and (max-height: 400px) {
+  #hero {
+    min-height: 600px;
+  }
+}
+
 #hero .hero-text {
   border-top: #00aeff 4px solid;
   border-bottom: #00aeff 4px solid;
@@ -59,6 +65,7 @@
   letter-spacing: 0.2ch;
   font-size: 3em;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 #hero .hero-text h1 sub {
@@ -75,16 +82,19 @@
 #hero .hero-text h2 {
   letter-spacing: 0.1ch;
   font-size: 1.7em;
+  margin-top: 1rem;
 }
 
 #hero .hero-text h3 {
   letter-spacing: 0.1ch;
   font-size: 1.5em;
+  margin-top: 1rem;
 }
 
 #hero .hero-text h4 {
   letter-spacing: 0.1ch;
   font-size: 1.4em;
+  margin-top: 1rem;
 }
 
 #hero .hero-text sup {

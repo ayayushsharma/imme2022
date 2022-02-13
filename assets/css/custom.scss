@@ -5,6 +5,9 @@
   padding: 0;
   margin-top: 70px;
   position: relative;
+  @media screen and (max-height: 400px) {
+    min-height: 600px;
+  }
   $text-color-special: hsl(199, 100%, 50%);
   $border-color: rgba($text-color-special, 1);
   .hero-text {
@@ -51,6 +54,7 @@
       letter-spacing: 0.2ch;
       font-size: 3em;
       margin-bottom: 1rem;
+      margin-top: 1rem;
       sub {
         letter-spacing: 0.2ch;
         font-size: 0.5;
@@ -64,14 +68,18 @@
     h2 {
       letter-spacing: 0.1ch;
       font-size: 1.7em;
+      margin-top: 1rem;
+
     }
     h3 {
       letter-spacing: 0.1ch;
       font-size: 1.5em;
+      margin-top: 1rem;
     }
     h4 {
       letter-spacing: 0.1ch;
       font-size: 1.4em;
+      margin-top: 1rem;
     }
     sup {
       color: $text-color-special;
