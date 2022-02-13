@@ -7,8 +7,8 @@
 }
 
 #hero .hero-text {
-  border-top: rgba(0, 162, 255, 0.73) 4px solid;
-  border-bottom: rgba(0, 162, 255, 0.73) 4px solid;
+  border-top: #00aeff 4px solid;
+  border-bottom: #00aeff 4px solid;
   border-radius: 8px;
   width: 70%;
   top: 50%;
@@ -21,7 +21,7 @@
   font-size: 1rem;
   z-index: 10;
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   font-size: inherit;
 }
 
@@ -47,16 +47,29 @@
 #hero .hero-text h2,
 #hero .hero-text h3,
 #hero .hero-text h4,
-#hero .hero-text h5 {
+#hero .hero-text h5,
+#hero .hero-text h6 {
+  text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 700;
 }
 
 #hero .hero-text h1 {
-  color: #00a2ff;
+  color: #00aeff;
   letter-spacing: 0.2ch;
   font-size: 3em;
   margin-bottom: 1rem;
+}
+
+#hero .hero-text h1 sub {
+  letter-spacing: 0.2ch;
+  font-size: 0.5;
+  margin-bottom: 1rem;
+}
+
+#hero .hero-text h1 img {
+  max-height: 3em;
+  max-width: 3em;
 }
 
 #hero .hero-text h2 {
@@ -75,14 +88,21 @@
 }
 
 #hero .hero-text sup {
-  color: #00a2ff;
+  color: #00aeff;
 }
 
 #hero .hero-text h5 {
-  margin-top: 1rem;
   letter-spacing: 0.13ch;
   font-size: 1.6em;
   text-transform: uppercase;
+}
+
+#hero .hero-text h6 {
+  font-size: 1em;
+}
+
+#hero .hero-text .organised-by {
+  margin-top: 1rem;
 }
 
 #topCarousel {
@@ -99,8 +119,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  -webkit-filter: brightness(0.6);
-          filter: brightness(0.6);
 }
 
 #hero .carousel-control-next-icon,

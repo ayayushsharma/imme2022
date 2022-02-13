@@ -5,8 +5,8 @@
   padding: 0;
   margin-top: 70px;
   position: relative;
-  $text-color-special: hsl(202, 100%, 50%);
-  $border-color: rgba($text-color-special, 0.73);
+  $text-color-special: hsl(199, 100%, 50%);
+  $border-color: rgba($text-color-special, 1);
   .hero-text {
     border-top: $border-color 4px solid;
     border-bottom: $border-color 4px solid;
@@ -21,7 +21,7 @@
     font-size: 1rem;
     z-index: 10;
     padding: 2rem;
-    background-color: hsla(0, 0%, 0%, 0.6);
+    background-color: hsla(0, 0%, 0%, 0.7);
     font-size: inherit;
 
     @media (max-width: 900px) {
@@ -40,7 +40,9 @@
     h2,
     h3,
     h4,
-    h5 {
+    h5,
+    h6 {
+      text-align: center;
       font-family: "Lato", sans-serif;
       font-weight: 700;
     }
@@ -49,6 +51,15 @@
       letter-spacing: 0.2ch;
       font-size: 3em;
       margin-bottom: 1rem;
+      sub {
+        letter-spacing: 0.2ch;
+        font-size: 0.5;
+        margin-bottom: 1rem;
+      }
+      img {
+        max-height: 3em;
+        max-width: 3em;
+      }
     }
     h2 {
       letter-spacing: 0.1ch;
@@ -66,10 +77,15 @@
       color: $text-color-special;
     }
     h5 {
-      margin-top: 1rem;
       letter-spacing: 0.13ch;
       font-size: 1.6em;
       text-transform: uppercase;
+    }
+    h6 {
+      font-size: 1em;
+    }
+    .organised-by {
+      margin-top: 1rem;
     }
   }
 }
@@ -88,7 +104,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.6);
+  //   filter: brightness(0.6);
 }
 
 #hero .carousel-control-next-icon,
