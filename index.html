@@ -183,6 +183,19 @@
       style="right: 10px; left: auto"
     /> -->
     <section id="hero">
+      <script>
+        // var hero = {
+        //   setHeaderOffset: function () {
+        //     var header = document.getElementById("header");
+        //     var hero = document.getElementById("hero");
+        //     hero.style.paddingTop = String(header.offsetHeight);
+        //     console.log(header.offsetHeight);
+        //     // console.log();
+        //     console.log("done");
+        //   },
+        // };
+        // hero.setHeaderOffset();
+      </script>
       <!-- <div class="slideshow-container">
         <div class="mySlides fade">
           <div class="numbertext">1 / 6</div>
@@ -225,46 +238,74 @@
       </div> -->
       <div
         id="topCarousel"
-        class="carousel carousel-dark slide carousel-fade"
+        class="carousel slide carousel-fade"
         data-bs-ride="carousel"
       >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#topCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#topCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#topCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#topCarousel"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#topCarousel"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#topCarousel"
+            data-bs-slide-to="5"
+            aria-label="Slide 6"
+          ></button>
+        </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="assets/img/slider/institute 12.png"
-              class="d-block w-100"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="assets/img/slider/institute 1.jpeg"
-              class="d-block w-100"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="assets/img/slider/institute 11.jpg"
-              class="d-block w-100"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="assets/img/slider/institute 4.png"
-              class="d-block w-100"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="assets/img/slider/institute 8.jpg"
-              class="d-block w-100"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="assets/img/slider/MicrosoftTeams-image.jpeg"
-              class="d-block w-100"
-            />
-          </div>
+          <div
+            class="carousel-item active"
+            style="background-image: url('assets/img/slider/1.jpeg')"
+          ></div>
+          <div
+            class="carousel-item"
+            style="background-image: url('assets/img/slider/2.jpeg')"
+          ></div>
+          <div
+            class="carousel-item"
+            style="background-image: url('assets/img/slider/3.png')"
+          ></div>
+          <div
+            class="carousel-item"
+            style="background-image: url('assets/img/slider/4.jpg')"
+          ></div>
+          <div
+            class="carousel-item"
+            style="background-image: url('assets/img/slider/5.jpg')"
+          ></div>
+          <div
+            class="carousel-item"
+            style="background-image: url('assets/img/slider/6.png')"
+          ></div>
         </div>
         <button
           class="carousel-control-prev"
@@ -272,7 +313,10 @@
           data-bs-target="#topCarousel"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span
+            class="carousel-control-prev-icon bi bi-chevron-left"
+            aria-hidden="true"
+          ></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button
@@ -281,7 +325,10 @@
           data-bs-target="#topCarousel"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span
+            class="carousel-control-next-icon bi bi-chevron-right"
+            aria-hidden="true"
+          ></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
@@ -1149,8 +1196,9 @@
     <script>
       var myCarousel = document.querySelector("#topCarousel");
       var carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 2000,
-        pause: false,
+        interval: 3000,
+        pause: true,
+        keyboard: true
       });
     </script>
   </body>
