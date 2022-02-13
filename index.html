@@ -163,27 +163,27 @@
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-        <a href="index.html" class="logo me-auto shortlogo"
+        <!-- <a href="index.html" class="logo me-auto shortlogo"
           ><img
             src="assets/img/50_year.png"
             alt=""
             class="img-fluid"
             style="padding: 1px"
-        /></a>
+        /></a> -->
         <!-- .navbar -->
       </div>
     </header>
     <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <img src="assets/img/institute_logo.png" class="logoinstitute" />
+    <!-- <img src="assets/img/institute_logo.png" class="logoinstitute" />
     <img
       src="assets/img/50_year.png"
       class="logoinstitute"
       style="right: 10px; left: auto"
-    />
+    /> -->
     <section id="hero">
-      <div class="slideshow-container">
+      <!-- <div class="slideshow-container">
         <div class="mySlides fade">
           <div class="numbertext">1 / 6</div>
           <img src="assets/img/slider/institute 12.png" style="width: 100%" />
@@ -222,8 +222,71 @@
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
+      </div> -->
+      <div
+        id="topCarousel"
+        class="carousel carousel-dark slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="assets/img/slider/institute 12.png"
+              class="d-block w-100"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/img/slider/institute 1.jpeg"
+              class="d-block w-100"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/img/slider/institute 11.jpg"
+              class="d-block w-100"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/img/slider/institute 4.png"
+              class="d-block w-100"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/img/slider/institute 8.jpg"
+              class="d-block w-100"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/img/slider/MicrosoftTeams-image.jpeg"
+              class="d-block w-100"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#topCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#topCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </section>
+
     <main id="main">
       <!-- ======= About Us Section ======= -->
       <section id="about" class="about">
@@ -987,7 +1050,6 @@
       <!-- End How to Reach Section -->
     </main>
     <!-- End #main -->
-
     <!-- ======= Footer ======= -->
     <footer id="footer">
       <div class="footer-top">
@@ -1084,5 +1146,12 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/slider.js"></script>
+    <script>
+      var myCarousel = document.querySelector("#topCarousel");
+      var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 2000,
+        pause: false,
+      });
+    </script>
   </body>
 </html>
