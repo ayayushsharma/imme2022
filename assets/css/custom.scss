@@ -2,12 +2,15 @@
 
 /***********************************************************/
 #hero {
+  width: 100%;
+  min-height: calc(100vh - 70px);
   padding: 0;
-  margin-top: 70px;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
   position: relative;
-  @media screen and (max-height: 400px) {
-    min-height: 600px;
-  }
+  margin-top: 70px;
+  display: grid;
+  place-items: center;
   $text-color-special: hsl(199, 100%, 50%);
   $border-color: rgba($text-color-special, 1);
   .hero-text {
@@ -15,14 +18,10 @@
     border-bottom: $border-color 4px solid;
     border-radius: 8px;
     width: 70%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    max-height: 100%;
+    position: relative;
     color: white;
     font-size: 1rem;
-    z-index: 10;
+    z-index: 20;
     padding: 2rem;
     background-color: hsla(0, 0%, 0%, 0.7);
     font-size: inherit;
@@ -36,7 +35,7 @@
     }
 
     @media (max-width: 600px) {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
     }
 
     h1,
@@ -67,9 +66,8 @@
     }
     h2 {
       letter-spacing: 0.1ch;
-      font-size: 1.7em;
+      font-size: 1.6em;
       margin-top: 1rem;
-
     }
     h3 {
       letter-spacing: 0.1ch;
@@ -86,100 +84,88 @@
     }
     h5 {
       letter-spacing: 0.13ch;
-      font-size: 1.6em;
-      text-transform: uppercase;
+      font-size: 1.35em;
     }
     h6 {
       font-size: 1em;
+      text-decoration: underline;
     }
     .organised-by {
       margin-top: 1rem;
     }
   }
-}
 
-#topCarousel {
-  height: 100%;
-  position: relative;
-}
-
-#topCarousel .carousel-inner {
-  height: 100%;
-}
-
-#topCarousel .carousel-inner .carousel-item {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  //   filter: brightness(0.6);
-}
-
-#hero .carousel-control-next-icon,
-#hero .carousel-control-prev-icon {
-  background: none;
-  font-size: 30px;
-  line-height: 0;
-  width: auto;
-  height: auto;
-  background: rgba(40, 58, 90, 0.9);
-  border-radius: 50px;
-  transition: 0.3s;
-  color: rgb(255, 255, 255);
-  width: 4rem;
-  aspect-ratio: 1/1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 900px) {
-    display: none;
+  #topCarousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    .carousel-inner {
+      height: 100%;
+      .carousel-item {
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        //   filter: brightness(0.6);
+      }
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+      background: none;
+      font-size: 30px;
+      line-height: 0;
+      width: auto;
+      height: auto;
+      background: rgba(40, 58, 90, 0.9);
+      border-radius: 50px;
+      transition: 0.3s;
+      color: rgb(255, 255, 255);
+      width: 4rem;
+      aspect-ratio: 1/1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
   }
 }
 
 /***********************************************************/
 #about {
   font-size: 1.2rem;
-}
-
-#about .section-title h2 {
-  letter-spacing: 0.05ch;
-  font-size: 2.5rem;
-}
-
-#about .content p {
-  font-family: "Lato", sans-serif;
-  /* letter-spacing: 0.05ch; */
-  font-size: 1.2em;
-  line-height: 1.4;
-  text-align: justify;
-  font-weight: 700;
-}
-
-@media screen and (min-width: 768px) {
-  #about .content p {
-    text-align: justify;
-    font-size: 1.4em;
+  .section-title h2 {
+    letter-spacing: 0.05ch;
+    font-size: 2.5rem;
   }
-}
-
-@media screen and (max-width: 768px) {
-  #about .content p {
-    font-size: 1.05em;
+  .content p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4;
+    text-align: justify;
     font-weight: 700;
+    @media screen and (min-width: 768px) {
+      text-align: justify;
+      font-size: 1.4em;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 1.05em;
+      font-weight: 700;
+    }
   }
 }
 
 /***********************************************************/
 #call-papers-themes > .container > p.description {
   letter-spacing: 0.05ch;
-  /* text-align: center; */
   margin-top: -1rem;
   margin-bottom: 2rem;
 }
 
 #call-papers-themes > .container > p {
   letter-spacing: 0.05ch;
-  /* text-align: center; */
   margin-top: -1rem;
 }
 
@@ -293,14 +279,6 @@
 
 .tab button.active {
   animation: tab-background 1.25s infinite;
-}
-
-@keyframes tab-background {
-  0% {
-  }
-
-  50% {
-  }
 }
 
 .tab-data .call_for_paper_tabcontent {
@@ -440,6 +418,16 @@
 /***********************************************************/
 #Advertisement-Tariffs .section-title p {
   letter-spacing: 0.05ch;
+}
+
+#Advertisement-Tariffs {
+  a,
+  a:focus {
+    color: inherit;
+  }
+  a:hover {
+    color: blue;
+  }
 }
 
 #Advertisement-Tariffs > .container > div > div {

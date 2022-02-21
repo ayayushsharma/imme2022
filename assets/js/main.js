@@ -14,7 +14,20 @@
             return document.querySelector(el)
         }
     }
-
+    
+        /**
+     * Scrolls to an element with header offset
+     */
+    const scrollto = (el) => {
+        let header = select('#header')
+        let offset = header.offsetHeight;
+        let elementPos = select(el).offsetTop;
+        console.log(elementPos - offset);
+        window.scrollTo({
+            top: elementPos - offset,
+            behavior: 'smooth'
+        })
+    }
 
     /**
      * Easy event listener function
@@ -209,9 +222,9 @@ let setupWindow = () => {
      */
     const scrollto = (el) => {
         let header = select('#header')
-        let offset = header.offsetHeight
-
-        let elementPos = select(el).offsetTop
+        let offset = header.offsetHeight;
+        let elementPos = select(el).offsetTop;
+        console.log(elementPos - offset);
         window.scrollTo({
             top: elementPos - offset,
             behavior: 'smooth'

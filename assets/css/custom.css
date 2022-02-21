@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 /***********************************************************/
 #hero {
+  width: 100%;
+  min-height: calc(100vh - 70px);
   padding: 0;
-  margin-top: 70px;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
   position: relative;
-}
-
-@media screen and (max-height: 400px) {
-  #hero {
-    min-height: 600px;
-  }
+  margin-top: 70px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 #hero .hero-text {
@@ -17,15 +18,10 @@
   border-bottom: #00aeff 4px solid;
   border-radius: 8px;
   width: 70%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: absolute;
-  max-height: 100%;
+  position: relative;
   color: white;
   font-size: 1rem;
-  z-index: 10;
+  z-index: 20;
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.7);
   font-size: inherit;
@@ -45,7 +41,7 @@
 
 @media (max-width: 600px) {
   #hero .hero-text {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -81,7 +77,7 @@
 
 #hero .hero-text h2 {
   letter-spacing: 0.1ch;
-  font-size: 1.7em;
+  font-size: 1.6em;
   margin-top: 1rem;
 }
 
@@ -103,36 +99,38 @@
 
 #hero .hero-text h5 {
   letter-spacing: 0.13ch;
-  font-size: 1.6em;
-  text-transform: uppercase;
+  font-size: 1.35em;
 }
 
 #hero .hero-text h6 {
   font-size: 1em;
+  text-decoration: underline;
 }
 
 #hero .hero-text .organised-by {
   margin-top: 1rem;
 }
 
-#topCarousel {
+#hero #topCarousel {
   height: 100%;
-  position: relative;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
 }
 
-#topCarousel .carousel-inner {
+#hero #topCarousel .carousel-inner {
   height: 100%;
 }
 
-#topCarousel .carousel-inner .carousel-item {
+#hero #topCarousel .carousel-inner .carousel-item {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-#hero .carousel-control-next-icon,
-#hero .carousel-control-prev-icon {
+#hero #topCarousel .carousel-control-next-icon,
+#hero #topCarousel .carousel-control-prev-icon {
   background: none;
   font-size: 30px;
   line-height: 0;
@@ -157,8 +155,8 @@
 }
 
 @media (max-width: 900px) {
-  #hero .carousel-control-next-icon,
-  #hero .carousel-control-prev-icon {
+  #hero #topCarousel .carousel-control-next-icon,
+  #hero #topCarousel .carousel-control-prev-icon {
     display: none;
   }
 }
@@ -175,7 +173,6 @@
 
 #about .content p {
   font-family: "Lato", sans-serif;
-  /* letter-spacing: 0.05ch; */
   font-size: 1.2em;
   line-height: 1.4;
   text-align: justify;
@@ -199,14 +196,12 @@
 /***********************************************************/
 #call-papers-themes > .container > p.description {
   letter-spacing: 0.05ch;
-  /* text-align: center; */
   margin-top: -1rem;
   margin-bottom: 2rem;
 }
 
 #call-papers-themes > .container > p {
   letter-spacing: 0.05ch;
-  /* text-align: center; */
   margin-top: -1rem;
 }
 
@@ -313,20 +308,6 @@
 .tab button.active {
   -webkit-animation: tab-background 1.25s infinite;
           animation: tab-background 1.25s infinite;
-}
-
-@-webkit-keyframes tab-background {
-  0% {
-  }
-  50% {
-  }
-}
-
-@keyframes tab-background {
-  0% {
-  }
-  50% {
-  }
 }
 
 .tab-data .call_for_paper_tabcontent {
@@ -474,6 +455,15 @@
 /***********************************************************/
 #Advertisement-Tariffs .section-title p {
   letter-spacing: 0.05ch;
+}
+
+#Advertisement-Tariffs a,
+#Advertisement-Tariffs a:focus {
+  color: inherit;
+}
+
+#Advertisement-Tariffs a:hover {
+  color: blue;
 }
 
 #Advertisement-Tariffs > .container > div > div {
