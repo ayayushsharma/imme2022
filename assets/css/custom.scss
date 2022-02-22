@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+/***********************************************************/
+#hero {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding: 0;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  position: relative;
+  margin-top: 70px;
+  display: grid;
+  place-items: center;
+  $text-color-special: hsl(199, 100%, 50%);
+  $border-color: rgba($text-color-special, 1);
+  .hero-text {
+    border-top: $border-color 4px solid;
+    border-bottom: $border-color 4px solid;
+    border-radius: 8px;
+    width: 70%;
+    position: relative;
+    color: white;
+    font-size: 1rem;
+    z-index: 20;
+    padding: 2rem;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    font-size: inherit;
+
+    @media (max-width: 900px) {
+      width: 90%;
+    }
+
+    @media (max-width: 900px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 0.75rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: center;
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+    }
+    h1 {
+      color: $text-color-special;
+      letter-spacing: 0.2ch;
+      font-size: 3em;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      sub {
+        letter-spacing: 0.2ch;
+        font-size: 0.5;
+        margin-bottom: 1rem;
+      }
+      img {
+        max-height: 3em;
+        max-width: 3em;
+      }
+    }
+    h2 {
+      letter-spacing: 0.1ch;
+      font-size: 1.6em;
+      margin-top: 1rem;
+    }
+    h3 {
+      letter-spacing: 0.1ch;
+      font-size: 1.5em;
+      margin-top: 1rem;
+    }
+    h4 {
+      letter-spacing: 0.1ch;
+      font-size: 1.4em;
+      margin-top: 1rem;
+    }
+    sup {
+      color: $text-color-special;
+    }
+    h5 {
+      letter-spacing: 0.13ch;
+      font-size: 1.35em;
+    }
+    h6 {
+      font-size: 1em;
+      text-decoration: underline;
+    }
+    .organised-by {
+      margin-top: 1rem;
+    }
+  }
+
+  #topCarousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    .carousel-inner {
+      height: 100%;
+      .carousel-item {
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        //   filter: brightness(0.6);
+      }
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+      background: none;
+      font-size: 30px;
+      line-height: 0;
+      width: auto;
+      height: auto;
+      background: rgba(40, 58, 90, 0.9);
+      border-radius: 50px;
+      transition: 0.3s;
+      color: rgb(255, 255, 255);
+      width: 4rem;
+      aspect-ratio: 1/1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+  }
+}
+
+/***********************************************************/
+#about {
+  font-size: 1.2rem;
+  .section-title h2 {
+    letter-spacing: 0.05ch;
+    font-size: 2.5rem;
+  }
+  .content p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4;
+    text-align: justify;
+    font-weight: 700;
+    @media screen and (min-width: 768px) {
+      text-align: justify;
+      font-size: 1.4em;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 1.05em;
+      font-weight: 700;
+    }
+  }
+}
+
+/***********************************************************/
+#call-papers-themes > .container > p.description {
+  letter-spacing: 0.05ch;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+#call-papers-themes > .container > p {
+  letter-spacing: 0.05ch;
+  margin-top: -1rem;
+}
+
+/***********************************************************/
+@media screen and (min-width: 768px) {
+  /* Style the tab */
+  .tab {
+    overflow: hidden;
+    background: linear-gradient(
+      90deg,
+      rgb(19, 122, 224) 0%,
+      rgb(55, 143, 231) 100%
+    );
+    /* border-radius: 18px; */
+    display: flex;
+    justify-content: center;
+    border-radius: 100px;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 1.25rem;
+    margin: 0.5em;
+    border-radius: 100px;
+    color: white;
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1ch;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: rgba(221, 221, 221, 0.15);
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Style the tab content */
+  .call_for_paper_tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 0px solid #ccc;
+    border-top: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Style the tab */
+  .tab {
+    overflow: hidden;
+    background: linear-gradient(
+      90deg,
+      rgb(19, 122, 224) 0%,
+      rgb(55, 143, 231) 100%
+    );
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* grid-column-gap: 0.5rem;
+                grid-row-gap: 0.5rem;
+                grid-gap: 0.5rem; */
+
+    border-radius: 1.5rem;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 1rem;
+    /* margin: 0.5em; */
+    border-radius: 1.5rem;
+    color: white;
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1ch;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: rgba(221, 221, 221, 0.178);
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: rgba(255, 255, 255, 0.301);
+  }
+
+  /* Style the tab content */
+  .call_for_paper_tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 0px solid #ccc;
+    border-top: none;
+  }
+}
+
+.tab button.active {
+  animation: tab-background 1.25s infinite;
+}
+
+.tab-data .call_for_paper_tabcontent {
+  margin-top: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  letter-spacing: 0.05ch;
+}
+
+.tab-data h2 {
+  margin-top: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+  letter-spacing: 0.08ch;
+}
+
+.tab-data ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  letter-spacing: 0.08ch;
+}
+
+.tab-data ul li {
+  margin-bottom: 0.25em;
+}
+
+.tab-data ul li span {
+  border-bottom: 0.5px solid transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .tab-data ul {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#material-design {
+  display: block;
+}
+
+/***********************************************************/
+#publication {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  letter-spacing: 0.05ch;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/***********************************************************/
+#registration > .container > .row > .col-lg-6 {
+  padding: 1.5rem 0.5rem;
+}
+
+#Registration-Fee {
+  letter-spacing: 0.05ch;
+  display: grid;
+  /* background-color: #eaefff; */
+  /* background-color: rgba(28, 49, 87, 0.9); */
+  padding: 2em;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 1rem rgba(0, 0, 0, 0.1);
+  border-top: 0.25rem solid;
+  border-top-color: #47b2e4;
+  height: 100%;
+}
+
+#Registration-Fee h3 {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.25em;
+  /* text-align: center; */
+  /* border-bottom: solid 0.5px grey; */
+}
+
+#Registration-Fee table tr {
+  font-weight: 500;
+  transition: 0.2s;
+  border-bottom: 1px solid #ddd;
+}
+
+#Registration-Fee table td:nth-child(2) {
+  text-align: right;
+}
+
+#Registration-Fee table td {
+  padding: 1em 0.5em;
+}
+
+#Registration-Fee table a,
+#Registration-Fee table a:focus {
+  color: inherit;
+}
+
+#Registration-Fee table a:hover {
+  color: rgb(2, 135, 224);
+}
+
+/***********************************************************/
+
+#Mode-of-payment {
+  letter-spacing: 0.05ch;
+  display: grid;
+  /* background-color: #eaefff; */
+  /* background-color: rgba(28, 49, 87, 0.9); */
+  padding: 2em;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 1rem rgba(0, 0, 0, 0.1);
+  border-top: 0.25rem solid;
+  border-top-color: #47b2e4;
+}
+
+#Mode-of-payment h3 {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.25em;
+  /* text-align: center; */
+  /* border-bottom: solid 0.5px grey; */
+}
+
+#Mode-of-payment table tr {
+  font-weight: 500;
+  transition: 0.2s;
+  border-bottom: 1px solid #ddd;
+}
+
+#Mode-of-payment table td:nth-child(2) {
+  text-align: right;
+}
+
+#Mode-of-payment table td {
+  padding: 0.5em;
+}
+
+/***********************************************************/
+#Advertisement-Tariffs .section-title p {
+  letter-spacing: 0.05ch;
+}
+
+#Advertisement-Tariffs {
+  a,
+  a:focus {
+    color: inherit;
+  }
+  a:hover {
+    color: blue;
+  }
+}
+
+#Advertisement-Tariffs > .container > div > div {
+  display: grid;
+}
+
+#Advertisement-Tariffs table {
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+#Advertisement-Tariffs table td {
+  padding: 1em 1.5em;
+  border-bottom: 0.5px #ddd solid;
+  letter-spacing: 0.05ch;
+}
+
+#Advertisement-Tariffs table tr:last-child td {
+  border-bottom: 0.5px transparent;
+}
+
+#Advertisement-Tariffs table tr td:nth-child(2) {
+  text-align: right;
+}
+
+/***********************************************************/
+
+.sponsorship-call-cards {
+  padding: 0 1rem;
+  letter-spacing: 0.05ch;
+}
+
+.sponsorship-call-cards > div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 2px 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1000px) {
+  .sponsorship-call-cards > div {
+    flex-direction: row;
+  }
+}
+
+.sponsorship-call-cards ul {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.sponsorship-call-cards li {
+  font-size: 1.1rem;
+  list-style: none;
+  margin-top: 0.6em;
+  position: relative;
+}
+
+.sponsorship-call-cards i {
+  color: rgb(0, 184, 0);
+  padding-right: 0.5rem;
+  font-size: 1.3em;
+  vertical-align: baseline;
+}
+
+.image {
+  min-width: 1.25rem;
+  min-height: 2.5rem;
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+}
+
+.Sponsorship-call-data-section {
+  padding: 1.5em;
+  color: inherit;
+}
+
+.Sponsorship-call-data-section h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.Sponsorship-call-data-section h4 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .Sponsorship-call-data-section {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Sponsorship-call-data-section > div {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .Sponsorship-call-data-section {
+    flex-direction: column;
+  }
+}
+
+.Sponsorship-call-data-section h4 span {
+  font-size: 1.1em;
+  margin-right: 0.25rem;
+}
+
+/***********************************************************/

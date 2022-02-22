@@ -14,7 +14,20 @@
             return document.querySelector(el)
         }
     }
-
+    
+        /**
+     * Scrolls to an element with header offset
+     */
+    const scrollto = (el) => {
+        let header = select('#header')
+        let offset = header.offsetHeight;
+        let elementPos = select(el).offsetTop;
+        console.log(elementPos - offset);
+        window.scrollTo({
+            top: elementPos - offset,
+            behavior: 'smooth'
+        })
+    }
 
     /**
      * Easy event listener function
@@ -209,9 +222,9 @@ let setupWindow = () => {
      */
     const scrollto = (el) => {
         let header = select('#header')
-        let offset = header.offsetHeight
-
-        let elementPos = select(el).offsetTop
+        let offset = header.offsetHeight;
+        let elementPos = select(el).offsetTop;
+        console.log(elementPos - offset);
         window.scrollTo({
             top: elementPos - offset,
             behavior: 'smooth'
@@ -293,22 +306,38 @@ let setupWindow = () => {
     }, true)
 }
 
+// if footer is not present in the page
+function makeFooter() {
+    const footer = document.getElementById("#footer");
+    if (!(footer === null || footer === undefined)) {
+        return footer;
+    }
+    var create = document.createElement("footer");
+    create.id = "footer";
+    document.body.append(create);
+    return create;
+}
+
+// This function will syncronize the Header and footer in all the pages from index.html
 (function () {
     // saving present navigation bar in case the function fails
     let savedStateTemperoryNavBar = document.getElementById("header").innerHTML;
 
+    let savedStateTemperoryFooter = makeFooter().innerHTML; // for footer
     // fetching navigation bar of index,html
     fetch("index.html").then(function (response) {
         return response.text();
     }).then(function (html) {
-        // This is the HTML from our response as a text string
-        console.log(html);
         let temp = document.createElement('div');
         temp.innerHTML = String(html);
-        document.getElementById("header").innerHTML = temp.querySelector("#header").innerHTML;
+        document.getElementById("header").innerHTML =
+            temp.querySelector("#header").innerHTML;
+        document.getElementById("footer").innerHTML =
+            temp.querySelector("#footer").innerHTML;
     }).catch(function (err) {
         // There was an error
         document.getElementById("header").innerHTML = savedStateTemperoryNavBar;
+        document.getElementById("footer").innerHTML = savedStateTemperoryFooter;
         console.warn('Something went wrong.', err);
     })
         // !DO NOT REMOVE THIS FUNCTION.
