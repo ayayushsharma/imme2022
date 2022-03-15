@@ -93,9 +93,10 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#"><span>Venue</span> <i class="bi bi-chevron-down"></i></a>
+            <a href="#"><span>Contact</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="index.html#contact">Location</a></li>
+              <li><a href="index.html#contactpersons">Contact Us</a></li>
               <li><a href="index.html#htr">How to Reach</a></li>
             </ul>
           </li>
@@ -408,7 +409,7 @@
         <br>
         <div id="publication">
           <h2 style="text-align: center;">Publication</h2>
-          <p >
+          <p>
             All accepted and registered papers will be published in the Scopus Index conference proceeding/book series.
             Selected submissions will be considered for publication in special/regular issues of
             Scopus/SCI/SCIE/ESCI-indexed journals. More journals to be included (visit the website for updates). Best
@@ -679,7 +680,7 @@
     </section>
     <!-- End Registration Section -->
 
-    
+
 
     <!-- ======= Call for Sponsorship Section ======= -->
     <section id="Call-for-Sponsorship" class="Call-for-Sponsorship">
@@ -766,8 +767,8 @@
         </script>
       </div>
     </section>
-    <!-- ======= Advertisement-Tariffs Section ======= -->
-    <section id="Advertisement-Tariffs" class="section-bg">
+     <!-- ======= Advertisement-Tariffs Section ======= -->
+     <section id="Advertisement-Tariffs" class="section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Advertisement Tariffs</h2>
@@ -779,10 +780,8 @@
           </p>
           <br />
           <p>
-            <a>
               It has been decided to accept selected advertisements as per the
               following rates:
-            </a>
           </p>
         </div>
         <div class="row justify-content-center">
@@ -790,57 +789,82 @@
             <table id="Advertisement-Tariffs-Table" class=""></table>
           </div>
         </div>
-        <script>
-          var Advertisement = {
-            tariffTable: function () {
-              let tariffs = [
-                {
-                  for: "Back cover outside (color)",
-                  price: "20,000.00",
-                  type: "RS",
-                },
-                {
-                  for: "Back cover inside (color)",
-                  price: "15,000.00",
-                  type: "RS",
-                },
-                {
-                  for: "Front cover inside (color)",
-                  price: "15,000.00",
-                  type: "RS",
-                },
-                {
-                  for: "Inside full page",
-                  price: "10,000.00",
-                  type: "RS",
-                },
-                {
-                  for: "Flex banner",
-                  price: "5,000.00",
-                  type: "RS",
-                },
-              ];
-              let table = document.getElementById(
-                "Advertisement-Tariffs-Table"
-              );
-              tariffs.forEach((array_element) => {
-                let tr = document.createElement("tr");
-                let category = document.createElement("td");
-                category.innerText = array_element.for;
-                let fee = document.createElement("td");
-                fee.innerHTML = `${array_element.type == "RS"
-                  ? '<a href="https://en.wikipedia.org/wiki/File:Indian_Rupee_symbol.svg">&#8377;</a> '
-                  : "USD "
-                  }${array_element.price}`;
-                tr.appendChild(category);
-                tr.appendChild(fee);
-                table.appendChild(tr);
-              });
-              console.log(table);
-            },
-          };
-          Advertisement.tariffTable();
-        </script>
+        
+      </div>
+    </section>
+    <!-- Advertisement-Tariffs Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Location</h2>
+          <p>
+            Prayagraj (Erstwhile Allahabad) is well known throughout the
+            country for its purity and cleanliness that the city has
+            maintained for many years. It’s a holy and religious place and the
+            meeting point of three most pious rivers namely Ganga, Yamuna and
+            invisible Saraswati. The city has always been associated with
+            well-known personalities of the country which has aggrandized the
+            glory of the city. The city has many governmental institutions
+            which include MNNIT Allahabad, High Court, Allahabad University &
+            tourist places like Holy Sangam, Bhardwaj Ashram, Museum, Narayani
+            Ashram, Akshayavatetc. Wide and clean roads with statues at
+            regular squares form a part of the attraction of the city.
+          </p>
+        </div>
+      </div>
+      <script>
+        var Advertisement = {
+          tariffTable: function () {
+            let tariffs = [
+              {
+                for: "Back cover outside (color)",
+                price: "20,000.00",
+                type: "RS",
+              },
+              {
+                for: "Back cover inside (color)",
+                price: "15,000.00",
+                type: "RS",
+              },
+              {
+                for: "Front cover inside (color)",
+                price: "15,000.00",
+                type: "RS",
+              },
+              {
+                for: "Inside full page",
+                price: "10,000.00",
+                type: "RS",
+              },
+              {
+                for: "Flex banner",
+                price: "5,000.00",
+                type: "RS",
+              },
+            ];
+            let table = document.getElementById(
+              "Advertisement-Tariffs-Table"
+            );
+            tariffs.forEach((array_element) => {
+              let tr = document.createElement("tr");
+              let category = document.createElement("td");
+              category.innerText = array_element.for;
+              let fee = document.createElement("td");
+              fee.innerHTML = `${array_element.type == "RS"
+                ? '<a href="https://en.wikipedia.org/wiki/File:Indian_Rupee_symbol.svg">&#8377;</a> '
+                : "USD "
+                }${array_element.price}`;
+              tr.appendChild(category);
+              tr.appendChild(fee);
+              table.appendChild(tr);
+            });
+            console.log(table);
+          },
+        };
+        Advertisement.tariffTable();
+      </script>
       </div>
     </section>
     <!-- Advertisement-Tariffs Section -->
@@ -898,164 +922,140 @@
     </section>
     <!-- End Contact Section -->
 
+
+    <!-- ======= Contact Persons Section ======= -->
+    <section id="contactpersons" class="contactpersons">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <div class="info">
+              <div class="address">
+                <h2>Dr. Manish Gupta</h3>
+                  <h3>Organizing Secretary, IMME-2022 </h3>
+                  <p>Department of Mechanical Engineering</p>
+                  <p>Motilal Nehru National Institute of Technology Allahabad (MNNITA),
+                    Prayagaraj-211004</p>
+              </div>
+              <p><b>Email:</b> imme2022@mnnit.ac.in</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="info">
+              <div class="address">
+                <h2>Dr. Tej Pratap</h3>
+                  <h3>Joint Organizing Secretary, IMME-2022</h3>
+                  <p>Department of Mechanical Engineering</p>
+                  <p>Motilal Nehru National Institute of Technology Allahabad (MNNITA),
+                    Prayagaraj-211004</p>
+              </div>
+              <p><b>Email:</b> imme2022@mnnit.ac.in</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Contact Persons Section -->
+
+
     <!-- ======= How to reach Section ======= -->
     <section id="htr" class="htr section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>How to Reach</h2>
           <p>
-            Prayagraj city is situated in the north part of India in the Awadh
-            region of state of Uttar Pradesh. It is well connected with
-            flights, rail and road transport to other parts of India. Daily
-            trains, buses and flights are available from major cities in
-            India.
+            Department of Mechanical Engineering, <br />
+            Motilal Nehru National Institute of Technology Allahabad
+            (MNNITA),<br />
+            Prayagraj, U.P. - 211004, INDIA <br /><br />
+
+            <strong>Phone:</strong> To Be Updated<br />
+            <strong>Email:</strong> imme2022@mnnit.ac.in<br />
           </p>
         </div>
 
-        <div class="htr-list">
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
           <ul>
-            <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i>
-              <a data-bs-toggle="collapse" class="collapse" data-bs-target="#htr-list-1">Prayagraj by Air <i
-                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="htr-list-1" class="collapse show" data-bs-parent=".htr-list">
-                <p>
-                  Prayagraj has its own domestic airport which is 15 km away
-                  from the heart of the city.
-                </p>
-              </div>
+            <li>
+              <i class="bx bx-chevron-right"></i> <a href="#hero">Home</a>
             </li>
-
-            <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i>
-              <a data-bs-toggle="collapse" data-bs-target="#htr-list-2" class="collapsed">Prayagraj by Train
-                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="htr-list-2" class="collapse" data-bs-parent=".htr-list">
-                <p>
-                  Railway station in Prayagraj (Prayagraj Junction) is a major
-                  railway station of north India and is situated in the heart
-                  of the city. The railway station is very well connected to
-                  all the important cities in India
-                </p>
-              </div>
+            <li>
+              <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
             </li>
-
-            <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i>
-              <a data-bs-toggle="collapse" data-bs-target="#htr-list-3" class="collapsed">Prayagraj by Bus <i
-                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="htr-list-3" class="collapse" data-bs-parent=".htr-list">
-                <p>
-                  Good road services are available in Prayagraj. UPSRTC buses
-                  offer service to most of the cities in Uttar Pradesh. From
-                  Prayagraj bus services are available to as far as Delhi (650
-                  km) and Kolkata (800km).For more details, please log-on to
-                  http://prayagraj.nic.in/
-                </p>
-              </div>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a href="#call-papers-themes">Call for Papers</a>
             </li>
           </ul>
         </div>
-      </div>
-    </section>
-    <!-- End How to Reach Section -->
-  </main>
-  <!-- End #main -->
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>IMME 2022</h3>
-            <p>
-              Department of Mechanical Engineering, <br />
-              Motilal Nehru National Institute of Technology Allahabad
-              (MNNITA),<br />
-              Prayagraj, U.P. - 211004, INDIA <br /><br />
 
-              <strong>Phone:</strong> To Be Updated<br />
-              <strong>Email:</strong> imme2022@mnnit.ac.in<br />
-            </p>
-          </div>
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Team</h4>
+          <ul>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a href="committee.html">Committee</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a href="#web-team">Web Team</a>
+            </li>
+          </ul>
+        </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li>
-                <i class="bx bx-chevron-right"></i> <a href="#hero">Home</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="#call-papers-themes">Call for Papers</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Team</h4>
-            <ul>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="committee.html">Committee</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="#web-team">Web Team</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Social Networks</h4>
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; <strong><span></span></strong>IMME All Rights Reserved
       </div>
-      <div class="credits">Designed by <a href="#">Web Team, IMME</a>.</div>
-    </div>
-  </footer>
-  <!-- End Footer -->
+      </div>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+      <div class="container footer-bottom clearfix">
+        <div class="copyright">
+          &copy; <strong><span></span></strong>IMME All Rights Reserved
+        </div>
+        <div class="credits">Designed by <a href="#">Web Team, IMME</a>.</div>
+      </div>
+      </footer>
+      <!-- End Footer -->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+      <div id="preloader"></div>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+          class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/slider.js"></script>
-  <script>
-    var myCarousel = document.querySelector("#topCarousel");
-    var carousel = new bootstrap.Carousel(myCarousel, {
-      interval: 2500,
-      keyboard: true,
-      pause: false,
-    });
-  </script>
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+
+      <!-- Template Main JS File -->
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/slider.js"></script>
+      <script>
+        var myCarousel = document.querySelector("#topCarousel");
+        var carousel = new bootstrap.Carousel(myCarousel, {
+          interval: 2500,
+          keyboard: true,
+          pause: false,
+        });
+      </script>
 </body>
 
 </html>
