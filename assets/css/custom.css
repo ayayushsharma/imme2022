@@ -210,6 +210,56 @@
   margin-top: -1rem;
 }
 
+
+/***********************************************************/
+#contactpersons {
+  font-size: 1.2rem;
+}
+
+#contactpersons .section-title h2 {
+  letter-spacing: 0.05ch;
+  font-size: 2.5rem;
+}
+
+#contactpersons .content p {
+  font-family: "Lato", sans-serif;
+  /* letter-spacing: 0.05ch; */
+  font-size: 1.2em;
+  line-height: 1.4;
+  text-align: justify;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  #contactpersons .content p {
+    text-align: justify;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #contactpersons .content p {
+    font-size: 1.05em;
+    font-weight: 700;
+  }
+}
+
+/***********************************************************/
+#call-papers-themes > .container > p.description {
+  letter-spacing: 0.05ch;
+  /* text-align: center; */
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+#call-papers-themes > .container > p {
+  letter-spacing: 0.05ch;
+  /* text-align: center; */
+  margin-top: -1rem;
+}
+
+
+
 /***********************************************************/
 @media screen and (min-width: 768px) {
   /* Style the tab */
