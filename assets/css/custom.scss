@@ -296,7 +296,7 @@
 }
 
 .tab-data ul {
-  text-align: center;
+  text-align: left;
   list-style: none;
   padding: 0;
   letter-spacing: 0.08ch;
@@ -348,6 +348,11 @@
   border-top: 0.25rem solid;
   border-top-color: #47b2e4;
   height: 100%;
+
+  > div.extra-info {
+    padding: 1em 0.5em;
+      border-bottom: 1px solid #ddd;
+  }
 }
 
 #Registration-Fee h3 {

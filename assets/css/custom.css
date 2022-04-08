@@ -345,7 +345,7 @@
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -382,6 +382,11 @@
   border-top: 0.25rem solid;
   border-top-color: #47b2e4;
   height: 100%;
+}
+
+#Registration-Fee > div.extra-info {
+  padding: 1em 0.5em;
+  border-bottom: 1px solid #ddd;
 }
 
 #Registration-Fee h3 {

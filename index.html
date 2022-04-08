@@ -582,66 +582,71 @@
         <div class="section-title">
           <h2>Registration</h2>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-lg-6 text-lg-start">
             <div id="Registration-Fee">
               <h3>Registration Fee</h3>
-            </div>
-            <script>
-              var registration = {
-                feeTable: function () {
-                  let feeArray = [
-                    {
-                      for: "Indian Delegates (Industry)",
-                      price: "5,000.00",
-                      type: "RS",
-                    },
-                    {
-                      for: "Indian Delegates (Academia)",
-                      price: "2,000.00",
-                      type: "RS",
-                    },
-                    {
-                      for: "Indian Delegates (Student)",
-                      price: "1,000.00",
-                      type: "RS",
-                    },
-                    {
-                      for: "Foreign Delegates",
-                      price: "200.00",
-                      type: "USD",
-                    },
-                    {
-                      for: "Foreign Delegates (Student)",
-                      price: "100.00",
-                      type: "USD",
-                    },
-                  ];
+              <table>
+                <tbody><tr>
+                  <td><strong>Category</strong></td>
+                  <td><strong>Indian Delegates</strong></td>
+                  <td><strong>Foreign Delegates</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Student</strong></td>
+                  <td>
+                    INR 5,000
+                    <!-- +900(18% GST)=INR 5900/-/-(Including GST)
+                     -->
+                  </td>
+                  <td>
+                    USD 250
+                    <!-- (18% GST ) -->
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Faculty</strong></td>
+                  <td>
+                    INR 8,000
+                    <!-- +1440 (18% GST)=INR 9440/- /-(Including GST) -->
+                  </td>
+                  <td>
+                    USD 400 
+                    <!-- (18% GST ) -->
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Industry</strong></td>
 
-                  let table = document.createElement("table");
-                  feeArray.forEach((array_element) => {
-                    let tr = document.createElement("tr");
-                    let category = document.createElement("td");
-                    category.innerText = array_element.for;
-                    let fee = document.createElement("td");
-                    fee.innerHTML = `${array_element.type == "RS"
-                      ? '<a href="https://en.wikipedia.org/wiki/File:Indian_Rupee_symbol.svg">&#8377;</a> '
-                      : "USD "
-                      }${array_element.price}`;
-                    tr.appendChild(category);
-                    tr.appendChild(fee);
-                    table.appendChild(tr);
-                  });
-                  document
-                    .getElementById("Registration-Fee")
-                    .appendChild(table);
-                  console.log(table);
-                },
-              };
-              registration.feeTable();
-            </script>
+                  <td>
+                    INR 10,000 
+                    <!-- + 1800 (18% GST )Rs. 11800/-(Including GST) -->
+                  </td>
+                  <td>
+                    USD 500 
+                    <!-- (18% GST ) -->
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Participation Only <br>(outside MNNIT Allahabad Delegates)</strong></td>
+                  <td>
+                    INR 4,000
+                  </td>
+                  <td>
+                    USD 200
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <div class="extra-info">
+                <strong>50% Discount in registration<br>fees may be offered to <br>communicating author for the<br> registration of the Second Paper.</strong>
+              </div>
+              <div class="extra-info">
+                <strong>Discount of INR 1000 for indian deligates<br>and USD 20 for foreign deligates will be<br>given during early bird registration</strong>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6 text-lg-start">
+          <div class="col-lg-6 text-lg-start" style="display:none">
             <div id="Mode-of-payment">
               <h3>Mode of Payment</h3>
               <p>
