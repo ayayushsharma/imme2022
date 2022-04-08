@@ -551,3 +551,19 @@
 }
 
 /***********************************************************/
+
+#Call-for-Sponsorship-Lists {
+  overflow-x: auto;
+  table  {
+    tr {
+      font-weight: 500;
+      transition: 0.2s;
+      border-bottom: 1px solid #ddd;
+    }
+
+    td {
+      padding: 1em 0.5em;
+    }
+  }
+
+}

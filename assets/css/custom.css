@@ -600,4 +600,18 @@
 }
 
 /***********************************************************/
+#Call-for-Sponsorship-Lists {
+  overflow-x: auto;
+}
+
+#Call-for-Sponsorship-Lists table tr {
+  font-weight: 500;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-bottom: 1px solid #ddd;
+}
+
+#Call-for-Sponsorship-Lists table td {
+  padding: 1em 0.5em;
+}
 /*# sourceMappingURL=custom.css.map */
