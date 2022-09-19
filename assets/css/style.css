@@ -11,10 +11,10 @@
 }
 #AlertDeadline{
   position: fixed;
-  color: red;
+  color: rgb(229, 255, 0);
   top: 10%;
   z-index:998;
-  font-size: x-large;
+  font-size: small;
   /* background-color: white;  */
 
 }
