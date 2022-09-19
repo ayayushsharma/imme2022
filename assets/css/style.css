@@ -218,7 +218,7 @@ h6 {
 --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 997;  /*check this*/
   padding: 15px 0;
 }
 
@@ -322,7 +322,7 @@ h6 {
   top: calc(100% + 30px);
   margin: 0;
   padding: 10px 0;
-  z-index: 99;
+  z-index: 99; /* check this */
   opacity: 0;
   visibility: hidden;
   background: #fff;
@@ -468,7 +468,7 @@ h6 {
   display: none;
   margin: 10px 20px;
   padding: 10px 0;
-  z-index: 99;
+  z-index: 99; /* check this */
   opacity: 1;
   visibility: visible;
   background: #fff;
